@@ -6,17 +6,28 @@ import express from 'express'
 import { Liquid } from 'liquidjs';
 
 
-console.log('Hieronder moet je waarschijnlijk nog wat veranderen')
 // Doe een fetch naar de data die je nodig hebt
 // const apiResponse = await fetch('...')
-
+const showsResponse = await fetch('https://fdnd-agency.directus.app/items/mh_shows');
+const showsResponseJSON = await showsResponse.json();
+ 
+const showResponse = await fetch('https://fdnd-agency.directus.app/items/mh_show');
+const showResponseJSON = await showResponse.json();
+ 
+const usersResponse = await fetch('https://fdnd-agency.directus.app/items/mh_users');
+const usersResponseJSON = await usersResponse.json();
+ 
+const radiostationsResponse = await fetch('https://fdnd-agency.directus.app/items/mh_radiostations');
+const radiostationsResponseJSON = await radiostationsResponse.json();
+ 
+const chatsResponse = await fetch('https://fdnd-agency.directus.app/items/mh_chats');
+const chatsResponseJSON = await chatsResponse.json();
 // Lees van de response van die fetch het JSON object in, waar we iets mee kunnen doen
 // const apiResponseJSON = await apiResponse.json()
 
 // Controleer eventueel de data in je console
 // (Let op: dit is _niet_ de console van je browser, maar van NodeJS, in je terminal)
 // console.log(apiResponseJSON)
-
 
 // Maak een nieuwe Express applicatie aan, waarin we de server configureren
 const app = express()
