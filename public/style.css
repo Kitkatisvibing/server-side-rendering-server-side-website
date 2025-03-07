@@ -1,2 +1,8 @@
 body{
+    --headercolor:#0091FF;
+    --footercolor:#011564;
+}
+
+header{
+    background-color: var(--headercolor)
 }
