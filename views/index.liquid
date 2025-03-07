@@ -1,9 +1,8 @@
 {% render 'partials/head.liquid' %}
 
-Succes!
 <ul>
-  {% for id in radiostations %}
-    <li>{{ radiostations.name }}</li>
+  {% for station in radiostations %}
+    <li>{{ station.name }}</li>
   {% endfor %}
 </ul>
 

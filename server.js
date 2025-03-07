@@ -48,7 +48,7 @@ app.get('/', async function (request, response) {
    // Geef hier eventueel data aan mee
   const showsResponse = await fetch('https://fdnd-agency.directus.app/items/mh_shows');
   const showsResponseJSON = await showsResponse.json();
-   response.render('index.liquid', {shows: showResponseJSON.data, show: showResponseJSON.data, users: usersResponseJSON, radiostations: radiostationsResponseJSON, chats: chatsResponseJSON})
+   response.render('index.liquid', {shows: showResponseJSON.data, show: showResponseJSON.data, users: usersResponseJSON.data, radiostations: radiostationsResponseJSON.data, chats: chatsResponseJSON.data})
 })
 
 // Maak een POST route voor de index; hiermee kun je bijvoorbeeld formulieren afvangen
