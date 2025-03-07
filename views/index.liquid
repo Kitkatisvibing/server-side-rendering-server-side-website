@@ -1,1 +1,10 @@
+{% render 'partials/head.liquid' %}
+
 Succes!
+<ul>
+  {% for id in radiostations %}
+    <li>{{ radiostations.name }}</li>
+  {% endfor %}
+</ul>
+
+{% render 'partials/foot.liquid' %}

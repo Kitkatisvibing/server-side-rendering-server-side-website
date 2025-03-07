@@ -8,8 +8,6 @@ import { Liquid } from 'liquidjs';
 
 // Doe een fetch naar de data die je nodig hebt
 // const apiResponse = await fetch('...')
-const showsResponse = await fetch('https://fdnd-agency.directus.app/items/mh_shows');
-const showsResponseJSON = await showsResponse.json();
  
 const showResponse = await fetch('https://fdnd-agency.directus.app/items/mh_show');
 const showResponseJSON = await showResponse.json();
@@ -48,7 +46,9 @@ app.set('views', './views')
 app.get('/', async function (request, response) {
    // Render index.liquid uit de Views map
    // Geef hier eventueel data aan mee
-   response.render('index.liquid')
+  const showsResponse = await fetch('https://fdnd-agency.directus.app/items/mh_shows');
+  const showsResponseJSON = await showsResponse.json();
+   response.render('index.liquid', {shows: showResponseJSON.data, show: showResponseJSON.data, users: usersResponseJSON, radiostations: radiostationsResponseJSON, chats: chatsResponseJSON})
 })
 
 // Maak een POST route voor de index; hiermee kun je bijvoorbeeld formulieren afvangen
