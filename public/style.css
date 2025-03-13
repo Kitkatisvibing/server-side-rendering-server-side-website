@@ -11,6 +11,7 @@ body{
 
 header{
     background-color: var(--veronicaHeadercolor);
+    color: white;
     text-align: left;
     grid-area: 1 / 1 / 2 / 6;
     display: flex;
@@ -41,5 +42,6 @@ button{
 
 footer{
     background-color: var(--veronicaFootercolor);
+    color: white;
     grid-area: 7 / 1 / 8 / 6;
 }
